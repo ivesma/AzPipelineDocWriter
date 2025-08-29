@@ -1,2 +1,2 @@
 # AzPipelineDocWriter
-A PowerShell module to facilitate
+A PowerShell module to facilitate creating documentation from parsing YAML Pipelines 
