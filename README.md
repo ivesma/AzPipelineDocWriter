@@ -1,2 +1,9 @@
 # AzPipelineDocWriter
-A PowerShell module to facilitate creating documentation from parsing YAML Pipelines 
+
+Small utilities to help document Azure Pipeline files.
+
+## Install
+
+```powershell
+Install-Module AzPipelineDocWriter -Scope CurrentUser
+```
