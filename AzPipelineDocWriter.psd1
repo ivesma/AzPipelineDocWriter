@@ -15,9 +15,9 @@
     AliasesToExport   = @()
 
     # Optional dependencies (example commented)
-    # RequiredModules   = @(
-    #     @{ ModuleName = 'Pester'; ModuleVersion = '5.5.0' }
-    # )
+    RequiredModules   = @(
+         @{ ModuleName = 'powershell-yaml'; ModuleVersion = '0.4.12' }
+    )
 
     PrivateData = @{
         PSData = @{

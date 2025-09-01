@@ -1,5 +1,4 @@
-Import-Module (Join-Path $PSScriptRoot '../AzPipelineDocWriter.psd1' -Resolve) -Force -Verbose
-Import-Module PSDocs
+#Install-Module -Name powershell-yaml -Scope CurrentUser -Force
+Import-Module (Join-Path $PSScriptRoot '../AzPipelineDocWriter.psd1' -Resolve) -Force #-Verbose
 
-$cmds = Get-Command -Module PSDocs,AzPipelineDocWriter
-$cmds
+Get-Command -Module powershell-yaml
