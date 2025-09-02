@@ -4,15 +4,39 @@
 # https: //aka.ms/yaml
 
 trigger:
-- main
+- none
+
 pool:
   vmImage: ubuntu-latest
 
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: ivesma/AzPipelineTemplates
+      ref: refs/heads/v0.0.1
+
 steps:
+- template: steps/step-Search-Files-Path.yml@templates
+  parameters:
+    CopyToFolder: false
+    FileNames:
+    - Name: 'AzPipelineDocWriter.psd1'
+      VarName: 'moduleDef.File.Path'
+    - Name: 'AzPipelineDocWriter.psm1'
+      VarName: 'module.File.Path'
+    - Name: 'AzPipelineDocWriter.pssettings'
+      VarName: 'module.Settings.Path'
+    ReturnFullPath: false
+    RootFolder: $(Build.SourcesDirectory)
+    TargetFolder: $(build.artifactstagingdirectory)
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https: //aka.ms/yaml
+    echo "Module Definition Path: $(moduleDef.File.Path)"
+    echo "Module Path: $(module.File.Path)"
+    echo "Module Settings Path: $(module.Settings.Path)"
   displayName: 'Run a multi-line script'
