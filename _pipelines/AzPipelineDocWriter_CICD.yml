@@ -1,7 +1,4 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https: //aka.ms/yaml
+name: '$(Build.DefinitionName)_$(Date:yyyyMMdd)$(Rev:.r)'
 
 trigger:
 - none
@@ -15,7 +12,7 @@ resources:
       type: github
       name: ivesma/AzPipelineTemplates
 #      ref: main
-      endpoint: ivesma
+      endpoint: AzPipelineTemplates
 
 steps:
 - template: steps/step-Search-Files-Path.yml@templates
