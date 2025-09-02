@@ -14,7 +14,7 @@ resources:
     - repository: templates
       type: github
       name: ivesma/AzPipelineTemplates
-      ref: v0.0.1
+#      ref: main
       endpoint: svc_pipeline_templates
 
 steps:
