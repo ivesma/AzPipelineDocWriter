@@ -15,6 +15,7 @@ resources:
       type: github
       name: ivesma/AzPipelineTemplates
       ref: refs/heads/v0.0.1
+      endpoint: svc_pipeline_templates
 
 steps:
 - template: steps/step-Search-Files-Path.yml@templates
