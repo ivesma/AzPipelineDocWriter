@@ -17,11 +17,9 @@ steps:
       VarName: 'module.File.Path'
     - Name: 'AzPipelineDocWriter.pssettings'
       VarName: 'module.Settings.Path'
-    ReturnFullPath: false
+    ReturnFullPath: true
     RootFolder: $(Build.SourcesDirectory)
     TargetFolder: $(build.artifactstagingdirectory)
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
