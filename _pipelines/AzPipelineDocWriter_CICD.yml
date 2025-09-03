@@ -9,7 +9,7 @@ pool:
 resources:
 
 steps:
-- template: /_pipelines\templates\steps\step-Search-Files-Path.yml
+- template: /_pipelines/templates/steps/step-Search-Files-Path.yml
   parameters:
     CopyToFolder: false
     FileNames:
