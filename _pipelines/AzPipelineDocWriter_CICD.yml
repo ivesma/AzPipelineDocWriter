@@ -6,8 +6,6 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-resources:
-
 steps:
 - template: /_pipelines/templates/steps/step-Search-Files-Path.yml
   parameters:
