@@ -10,9 +10,9 @@ resources:
   repositories:
     - repository: templates
       type: github
-      name: ivesma/AzPipelineTemplates
+      name: ivesma/AzPipelineTemplates # this is a public repo
 #      ref: main
-      endpoint: AzPipelineTemplates
+#      endpoint: AzPipelineTemplates
 
 steps:
 - template: steps/step-Search-Files-Path.yml@templates
